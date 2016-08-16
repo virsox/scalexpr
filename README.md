@@ -1,2 +1,3 @@
 # scalexpr
-Simple expression parser / evaluator 
+Simple expression parser and evaluator for Scala. 
+
