@@ -3,7 +3,7 @@ import Dependencies._
 
 scalacOptions in ThisBuild ++= Seq("-deprecation", "-feature")
 
-organization := "ca.uwo.eng.sel"
+organization := "br.com.virsox.scalexpr"
 
 name := "scalexpr"
 
