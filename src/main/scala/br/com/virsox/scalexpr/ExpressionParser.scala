@@ -2,7 +2,7 @@ package br.com.virsox.scalexpr
 
 import java.time.Instant
 
-import fastparse.all._
+import fastparse._
 
 import scala.reflect.runtime.universe._
 import scala.util.{Failure, Success, Try}
