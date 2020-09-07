@@ -5,9 +5,9 @@ object Dependencies {
 
 
   val logback        = "ch.qos.logback" % "logback-classic" % "1.1.3"
-  val scalaCompiler  = "org.scala-lang" % "scala-compiler" % "2.11.7"
-  val scalaReflect   = "org.scala-lang" % "scala-reflect"  % "2.11.7"
-  val fastParse      = "com.lihaoyi" %% "fastparse" % "0.3.7"
+  val scalaCompiler  = "org.scala-lang" % "scala-compiler" % "2.12.12"
+  val scalaReflect   = "org.scala-lang" % "scala-reflect"  % "2.12.12"
+  val fastParse      = "com.lihaoyi" %% "fastparse" % "1.0.0"
 
   // ------------------- test
   val mockito   = "org.mockito" % "mockito-core" % "1.9.5" % Test

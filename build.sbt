@@ -11,6 +11,6 @@ version := "0.0.1-SNAPSHOT"
 
 isSnapshot := true
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.12"
 
 libraryDependencies ++= (baseDeps ++ testDeps)
