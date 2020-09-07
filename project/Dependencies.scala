@@ -4,9 +4,9 @@ import Keys._
 object Dependencies {
 
   val logback       = "ch.qos.logback" % "logback-classic" % "1.1.3"
-  val scalaCompiler = "org.scala-lang" % "scala-compiler"  % "2.12.12"
-  val scalaReflect  = "org.scala-lang" % "scala-reflect"   % "2.12.12"
-  val fastParse     = "com.lihaoyi"   %% "fastparse"       % "2.1.0"
+  val scalaCompiler = "org.scala-lang" % "scala-compiler"  % "2.13.3"
+  val scalaReflect  = "org.scala-lang" % "scala-reflect"   % "2.13.3"
+  val fastParse     = "com.lihaoyi"   %% "fastparse"       % "2.1.3"
 
   // ------------------- test
   val mockito   = "org.mockito"    % "mockito-core" % "1.9.5" % Test
