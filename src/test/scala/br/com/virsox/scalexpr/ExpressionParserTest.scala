@@ -24,11 +24,6 @@ class ExpressionParserTest extends AnyFlatSpec with Matchers {
     }
   }
 
-  "An ExpressionParser2" should "parse an int expression" in new Fixture {
-    verify(parser.parseIntExpression("5 +3"), IntConstant(5) + IntConstant(3))
-  }
-
-
   "An ExpressionParser" should "parse an int expression" in new Fixture {
     verify(parser.parseIntExpression("5 +3"), IntConstant(5) + IntConstant(3))
   }
