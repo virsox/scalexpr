@@ -10,12 +10,12 @@ object Dependencies {
   val fastParse      = "com.lihaoyi" %% "fastparse" % "0.3.7"
 
   // ------------------- test
-  val junit     = "junit" % "junit" % "4.11" % Test
   val mockito   = "org.mockito" % "mockito-core" % "1.9.5" % Test
-  val scalaTest = "org.scalatest" %% "scalatest" % "2.2.6" % Test
+  val scalaTest = "org.scalatest" %% "scalatest" % "3.2.0" % Test
+  val scalactic = "org.scalatest" %% "scalactic" % "3.2.0"
 
   val baseDeps  = Seq(logback, fastParse, scalaCompiler, scalaReflect)
-  val testDeps  = Seq(junit, mockito, scalaTest)
+  val testDeps  = Seq(mockito, scalaTest)
 
 
 

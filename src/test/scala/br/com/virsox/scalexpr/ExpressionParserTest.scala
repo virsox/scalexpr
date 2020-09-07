@@ -2,16 +2,13 @@ package br.com.virsox.scalexpr
 
 import java.time.Instant
 
-import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 import scala.util.{Failure, Success, Try}
 
 /*** Tests for expression parsing */
-@RunWith(classOf[JUnitRunner])
-class ExpressionParserTest extends FlatSpec
-  with Matchers {
+class ExpressionParserTest extends AnyFlatSpec with Matchers {
 
   trait Fixture {
     val parser = ExpressionParser()
@@ -25,6 +22,10 @@ class ExpressionParserTest extends FlatSpec
       case Success(parsed) => parsed shouldBe result
       case Failure(ex) => fail(ex)
     }
+  }
+
+  "An ExpressionParser2" should "parse an int expression" in new Fixture {
+    verify(parser.parseIntExpression("5 +3"), IntConstant(5) + IntConstant(3))
   }
 
 

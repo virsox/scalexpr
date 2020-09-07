@@ -2,14 +2,11 @@ package br.com.virsox.scalexpr
 
 import java.time.Instant
 
-import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 /*** Tests for expression evaluation */
-@RunWith(classOf[JUnitRunner])
-class ExpressionTest extends FlatSpec
-  with Matchers {
+class ExpressionTest extends AnyFlatSpec with Matchers {
 
   trait BooleanConstants {
     val consTrue1  = BooleanConstant(true)
@@ -157,7 +154,7 @@ class ExpressionTest extends FlatSpec
 
 
   trait TestWithDates {
-    val date1 = Instant.parse("2015-12-01T10:00:00.000Z")
+    val date1: Instant = Instant.parse("2015-12-01T10:00:00.000Z")
     val date2 = Instant.parse("2010-10-10T10:00:00.000Z")
 
   }
@@ -178,7 +175,7 @@ class ExpressionTest extends FlatSpec
     val cons1 = DateTimeConstant(date1)
     val var1 = DateTimeVar("since")
 
-    val context: Map[String, Any] = Map("since" -> "2010-10-10T10:00:00.000Z")
+    val context: Map[String, Any] = Map("since" -> date2)
 
     (cons1 > var1).resolve(context) shouldBe true
     (cons1 < var1).resolve(context) shouldBe false
